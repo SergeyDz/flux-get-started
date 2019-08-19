@@ -15,7 +15,7 @@ spec:
   values:
     image:
       repository: nginx
-      tag: 1.16-alpine-perl
+      tag: latest
       pullPolicy: IfNotPresent
     resources:
       requests:
