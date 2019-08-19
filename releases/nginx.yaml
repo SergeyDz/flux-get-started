@@ -6,6 +6,7 @@ metadata:
   namespace: demo
   annotations:
     flux.weave.works/automated: "true"
+    flux.weave.works/tag.prometheus: semver:~1.17
 spec:
   releaseName: nginx
   chart:
@@ -15,7 +16,7 @@ spec:
   values:
     image:
       repository: nginx
-      tag: latest
+      tag: 1.17.3
       pullPolicy: IfNotPresent
     resources:
       requests:
