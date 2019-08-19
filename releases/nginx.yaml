@@ -4,6 +4,8 @@ kind: HelmRelease
 metadata:
   name: nginx
   namespace: demo
+  annotations:
+    flux.weave.works/automated: "true"
 spec:
   releaseName: nginx
   chart:
