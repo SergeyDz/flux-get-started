@@ -13,9 +13,9 @@ spec:
     ref: master
     path: charts/nginx
   values:
-    image: 
+    image:
       repository: nginx
-      tag: alpine
+      tag: 1.16-alpine-perl
       pullPolicy: IfNotPresent
     resources:
       requests:
