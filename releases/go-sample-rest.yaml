@@ -5,8 +5,8 @@ metadata:
   name: go-sample-rest
   namespace: dev-flux
   annotations:
-    flux.weave.works/automated: "false"
-    flux.weave.works/tag.chart-image: glob:1.21.*
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:1.*
 spec:
   releaseName: go-sample-rest
   chart:
@@ -14,7 +14,7 @@ spec:
     ref: master
     path: charts/go-sample-rest
   values:
-    image: sergeydz/go-sample-rest:latest
+    image: sergeydz/go-sample-rest:master
     persistence:
       enabled: false
     resources:
