@@ -14,7 +14,7 @@ spec:
     ref: master
     path: charts/go-sample-rest
   values:
-    image: sergeydz/go-sample-rest:master
+    image: sergeydz/go-sample-rest:latest
     persistence:
       enabled: false
     resources:
@@ -22,6 +22,3 @@ spec:
         memory: 32Mi
         cpu: 10m
     serviceType: ClusterIP
-    mariadb:
-      persistence:
-        enabled: false
