@@ -1,6 +1,7 @@
 replicaCount: 1
 
-image: sergeydz\go-sample-rest
+image: sergeydz\go-sample-rest:latest
+imagepullPolicy: Always
 
 container:
   port: 8080
