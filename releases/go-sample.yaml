@@ -2,7 +2,7 @@
 apiVersion: flux.weave.works/v1beta1
 kind: HelmRelease
 metadata:
-  name: go-sample-rest
+  name: go-sample
   namespace: dev-flux
   annotations:
     flux.weave.works/automated: "true"
