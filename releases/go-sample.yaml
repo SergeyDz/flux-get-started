@@ -1,0 +1,24 @@
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: go-sample-rest
+  namespace: dev-flux
+  annotations:
+    flux.weave.works/automated: "true"
+    flux.weave.works/tag.chart-image: glob:1.*
+spec:
+  releaseName: go-sample
+  chart:
+    git: ssh://git@github.com/SergeyDz/flux-get-started
+    ref: master
+    path: charts/go-sample
+  values:
+    image: sergeydz/go-sample-rest:latest
+    persistence:
+      enabled: false
+    resources:
+      requests:
+        memory: 32Mi
+        cpu: 10m
+    serviceType: ClusterIP
